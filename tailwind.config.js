@@ -9,7 +9,8 @@ export default {
   theme: {
     extend: {
       colors:{
-        "nav-clr":"#2C2C2C"
+        "nav-clr":"#2C2C2C",
+        "footer-clr":"#2C2C2C"
       }
     },
   },
