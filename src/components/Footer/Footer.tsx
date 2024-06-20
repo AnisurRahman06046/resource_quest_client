@@ -1,7 +1,7 @@
 function FooterComponent() {
   return (
     <footer className="bg-footer-clr py-2  dark:bg-gray-800">
-      <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+      <div className="w-full  mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
         <div>
           <span className="text-lg font-semibold text-white sm:text-center dark:text-gray-400">
             Resource Quest

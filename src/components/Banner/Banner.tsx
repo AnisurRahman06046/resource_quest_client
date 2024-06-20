@@ -1,4 +1,4 @@
-import bannerImage from "../../assets/bg.jpg";
+// import bannerImage from "../../assets/bg.jpg";
 function Banner() {
   return (
     <section className="bg-center bg-no-repeat bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-gray-700 bg-blend-multiply">
