@@ -18,7 +18,7 @@ function SignUp() {
                     <div className="text-center">
                       <img className="mx-auto w-48" src={logo} alt="logo" />
                       <h4 className="mb-12 mt-1 pb-1 text-white text-xl font-semibold">
-                        We are The <span>RQ</span> Team
+                        We are The <span className="text-logo-color font-bold">RQ</span> Team
                       </h4>
                     </div>
 

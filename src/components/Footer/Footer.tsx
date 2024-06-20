@@ -1,13 +1,17 @@
 import { Link } from "react-router-dom";
-
+import logo from "../../../public/rq1.png";
 function FooterComponent() {
   return (
     <footer className="bg-footer-clr py-2  dark:bg-gray-800">
       <div className="w-full  mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
         <div>
-          <span className="text-lg font-semibold text-white sm:text-center dark:text-gray-400">
-            Resource Quest
-          </span>
+          <div className="flex gap-2 items-center">
+            <img className="h-8" src={logo} alt="" />
+
+            <h1 className="text-lg font-semibold text-logo-color sm:text-center dark:text-gray-400">
+              Resource Quest
+            </h1>
+          </div>
           <p className="text-white text-sm">
             Empowering you to manage your resources effectively
           </p>
