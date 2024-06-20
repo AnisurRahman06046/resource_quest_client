@@ -1,13 +1,13 @@
 import Banner from "../Banner/Banner";
-import FooterComponent from "../Footer/Footer";
-import Header from "../Header/Header";
+// import FooterComponent from "../Footer/Footer";
+// import Header from "../Header/Header";
 
 function Home() {
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <Banner/>
-      <FooterComponent/>
+      {/* <FooterComponent/> */}
     </div>
   );
 }

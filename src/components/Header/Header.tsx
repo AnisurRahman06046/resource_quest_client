@@ -1,48 +1,6 @@
-// // import logo from "../../../public/rq.png"
-// import logo1 from "../../../public/rq1.png"
-// // import logo2 from "../../../public/rq2.png"
-// function Header() {
-//   return (
-// <nav className="bg-nav-clr border-gray-200 dark:bg-gray-900">
-//   <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-//     <a href="https://flowbite.com/" className="flex items-center space-x-3 rtl:space-x-reverse">
-//         {/* <img src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Flowbite Logo" /> */}
-//         <img src={logo1} className="h-8" alt="Flowbite Logo" />
-//         <span className="self-center text-white font-serif text-2xl font-semibold whitespace-nowrap dark:text-white">Resource Quest</span>
-//     </a>
-//     <button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
-//         <span className="sr-only">Open main menu</span>
-//         <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-//             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-//         </svg>
-//     </button>
-//     <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-//       <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-nav-clr md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-nav-clr dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-      
-//         <li>
-//           <a href="#" className="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
-//         </li>
-//         <li>
-//           <a href="#" className="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
-//         </li>
-//         <li>
-//           <a href="#" className="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
-//         </li>
-//         <li>
-//           <a href="#" className="block py-2 px-3 text-white hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
-//         </li>
-//       </ul>
-//     </div>
-//   </div>
-// </nav>
-//   );
-// }
-
-// export default Header;
-
-
-import { useState } from 'react';
+import { useState } from "react";
 import logo1 from "../../../public/rq1.png";
+import { Link } from "react-router-dom";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,9 +12,14 @@ function Header() {
   return (
     <nav className="bg-nav-clr border-gray-200 dark:bg-gray-900">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="https://flowbite.com/" className="flex items-center space-x-3 rtl:space-x-reverse">
+        <a
+          href="https://flowbite.com/"
+          className="flex items-center space-x-3 rtl:space-x-reverse"
+        >
           <img src={logo1} className="h-8" alt="Flowbite Logo" />
-          <span className="self-center text-white font-serif text-2xl font-semibold whitespace-nowrap dark:text-white">Resource Quest</span>
+          <span className="self-center text-white font-serif text-2xl font-semibold whitespace-nowrap dark:text-white">
+            Resource Quest
+          </span>
         </a>
         <button
           onClick={handleToggle}
@@ -67,23 +30,66 @@ function Header() {
           aria-expanded={isOpen}
         >
           <span className="sr-only">Open main menu</span>
-          <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+          <svg
+            className="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
           </svg>
         </button>
-        <div className={`${isOpen ? '' : 'hidden'} w-full md:block md:w-auto`} id="navbar-default">
+        <div
+          className={`${isOpen ? "" : "hidden"} w-full md:block md:w-auto`}
+          id="navbar-default"
+        >
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-nav-clr md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-nav-clr dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-            <li>
-              <a href="#" className="block py-2 px-3 text-white rounded hover:bg-blue-950 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+          <li>
+              <Link
+                to="/"
+                className="block py-2 px-3 text-white rounded hover:bg-blue-950 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              >
+                Home
+              </Link>
             </li>
             <li>
-              <a href="#" className="block py-2 px-3 text-white rounded hover:bg-blue-950 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
+              <Link
+                to="/about"
+                className="block py-2 px-3 text-white rounded hover:bg-blue-950 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              >
+                About
+              </Link>
             </li>
             <li>
-              <a href="#" className="block py-2 px-3 text-white rounded hover:bg-blue-950 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
+              <Link
+                to="/contact"
+                className="block py-2 px-3 text-white rounded hover:bg-blue-950 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              >
+                Contact
+              </Link>
             </li>
             <li>
-              <a href="#" className="block py-2 px-3 text-white hover:bg-blue-950 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+              <Link
+                to="/login"
+                className="block py-2 px-3 text-white rounded hover:bg-blue-950 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              >
+                Login
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/register"
+                className="block py-2 px-3 text-white hover:bg-blue-950 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              >
+                SIgn Up
+              </Link>
             </li>
           </ul>
         </div>
