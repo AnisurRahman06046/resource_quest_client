@@ -1,4 +1,7 @@
-function Button({ title }) {
+type titleProps={
+  title:string
+}
+function Button({ title }:titleProps) {
   return (
     <button
       type="submit"
