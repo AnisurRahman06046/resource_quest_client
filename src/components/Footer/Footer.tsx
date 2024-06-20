@@ -25,9 +25,9 @@ function FooterComponent() {
             </Link>
           </li>
           <li>
-            <a href="#" className="hover:underline">
+            <Link to="/contact" className="hover:underline">
               Contact Us
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
