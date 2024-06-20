@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import logo from "../../../public/rq1.png";
-import SideImg from "../../../public/collective-3291989_1280.jpg";
+import logo from "/rq1.png";
+import SideImg from "/collective-3291989_1280.jpg";
 import Button from "../Button/Button";
 
 function SignUp() {

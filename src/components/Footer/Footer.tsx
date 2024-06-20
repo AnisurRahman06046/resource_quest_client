@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function FooterComponent() {
   return (
     <footer className="bg-footer-clr py-2  dark:bg-gray-800">
@@ -6,20 +8,21 @@ function FooterComponent() {
           <span className="text-lg font-semibold text-white sm:text-center dark:text-gray-400">
             Resource Quest
           </span>
-            <p className="text-white text-sm">Empowering you to manage your resources effectively</p>
+          <p className="text-white text-sm">
+            Empowering you to manage your resources effectively
+          </p>
         </div>
 
         <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-white dark:text-gray-400 sm:mt-0">
-
           <li>
-            <a href="#" className="hover:underline me-4 md:me-6">
+            <Link to="/policy" className="hover:underline me-4 md:me-6">
               Privacy Policy
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="hover:underline me-4 md:me-6">
+            <Link to="/terms" className="hover:underline me-4 md:me-6">
               Terms of Service
-            </a>
+            </Link>
           </li>
           <li>
             <a href="#" className="hover:underline">
