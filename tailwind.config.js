@@ -11,7 +11,9 @@ export default {
       colors:{
         "nav-clr":"#2C2C2C",
         "footer-clr":"#2C2C2C",
-        "brand-color":"#2C2C2C"
+        "brand-color":"#2C2C2C",
+        // "logo-color":"#011C37"
+        "logo-color":"#2694C7"
       }
     },
   },

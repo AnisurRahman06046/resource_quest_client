@@ -17,7 +17,7 @@ function Header() {
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
           <img src={logo1} className="h-8" alt="Flowbite Logo" />
-          <span className="self-center text-white font-serif text-2xl font-semibold whitespace-nowrap dark:text-white">
+          <span className="self-center text-logo-color font-serif text-2xl font-semibold whitespace-nowrap dark:text-white">
             Resource Quest
           </span>
         </a>
