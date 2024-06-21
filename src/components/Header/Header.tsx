@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logo1 from "/rq1.png";
+import logo1 from "/rq1.webp";
 import { Link } from "react-router-dom";
 
 function Header() {

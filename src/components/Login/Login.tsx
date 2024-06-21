@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from "/rq1.png";
 import Button from "../Button/Button";
-import SideImg from "/loginImg.jpg";
+import SideImg from "/loginImg.webp";
 function Login() {
   return (
     <section className="gradient-form h-full bg-neutral-200 dark:bg-neutral-700">
@@ -11,7 +11,7 @@ function Login() {
           <div className="block rounded-lg bg-white shadow-lg dark:bg-neutral-800">
             <div className="g-0 lg:flex  lg:flex-wrap">
               {/* Left column container */}
-              <div className="px-4 md:px-0 lg:w-6/12 bg-black">
+              <div className="px-4 md:px-0 lg:w-6/12 bg-black p-1">
                 <div className="md:mx-6 md:p-12">
                   {/* Logo */}
                   <div className="text-center">

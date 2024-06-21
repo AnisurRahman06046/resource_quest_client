@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import logo from "../../../public/rq1.png";
+import logo from "/rq1.webp";
 function FooterComponent() {
   return (
     <footer className="bg-footer-clr py-2  dark:bg-gray-800">
-      <div className="w-full  mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+      <div className="w-full  mx-auto max-w-screen-xl p-9 lg:p-4 md:flex md:items-center md:justify-between ">
         <div>
           <div className="flex gap-2 items-center">
             <img className="h-8" src={logo} alt="" />
