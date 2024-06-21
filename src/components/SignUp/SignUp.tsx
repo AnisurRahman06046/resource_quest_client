@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import logo from "/rq1.png";
-import SideImg from "/collective-3291989_1280.jpg";
+import SideImg from "/collective-3291989_1280.webp";
 import Button from "../Button/Button";
 
 function SignUp() {
   return (
-    <section className="gradient-form h-full bg-neutral-200 dark:bg-neutral-700">
+    <section className="gradient-form h-full  bg-neutral-200 dark:bg-neutral-700">
       <div className="container h-full">
         <div className="flex h-full flex-wrap items-center justify-center text-neutral-800 dark:text-neutral-200">
           <div className="w-full">
@@ -18,11 +18,11 @@ function SignUp() {
                     <div className="text-center">
                       <img className="mx-auto w-48" src={logo} alt="logo" />
                       <h4 className="mb-12 mt-1 pb-1 text-white text-xl font-semibold">
-                        We are The <span>RQ</span> Team
+                        We are The <span className="text-logo-color font-bold">RQ</span> Team
                       </h4>
                     </div>
 
-                    <form className="max-w-sm mx-auto">
+                    <form className="max-w-sm  mx-auto ">
                       <div className="mb-5">
                         <label className="block mb-2 text-sm font-medium text-white dark:text-white">
                           User Name

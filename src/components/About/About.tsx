@@ -1,4 +1,4 @@
-import logo from "/rq1.png"
+import logo from "/rq1.webp"
 function About() {
   return (
     <section className="bg-black dark:bg-gray-800 p-8    mx-auto ">
