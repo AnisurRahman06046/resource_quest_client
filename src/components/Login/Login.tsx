@@ -4,17 +4,17 @@ import Button from "../Button/Button";
 import SideImg from "/loginImg.webp";
 function Login() {
   return (
-    <section className="gradient-form h-full bg-neutral-200 dark:bg-neutral-700">
+    <section className="gradient-form  bg-neutral-200 dark:bg-neutral-700">
     <div className="container h-full">
       <div className="flex h-full flex-wrap items-center justify-center text-neutral-800 dark:text-neutral-200">
         <div className="w-full">
           <div className="block rounded-lg bg-white shadow-lg dark:bg-neutral-800">
-            <div className="g-0 lg:flex  lg:flex-wrap">
+            <div className="g-0 lg:flex   lg:flex-wrap">
               {/* Left column container */}
-              <div className="px-4 md:px-0 lg:w-6/12 bg-black p-1">
+              <div className="px-4 md:px-0  lg:w-6/12 bg-black p-1">
                 <div className="md:mx-6 md:p-12">
                   {/* Logo */}
-                  <div className="text-center">
+                  <div className="text-center mt-12 ">
                     <img className="mx-auto w-48" src={logo} alt="logo" />
                     <h4 className="mb-12 mt-1 pb-1 text-white text-xl font-semibold">
                       We are The <span>RQ</span> Team
@@ -86,6 +86,8 @@ function Login() {
       </div>
     </div>
   </section>
+
+
   );
 }
 
