@@ -9,6 +9,7 @@ import Privacy from "../components/PrivacyPolicy/Privacy";
 import Terms from "../components/Terms/Terms";
 import Layout from "../Layout/Layout";
 import Resources from "../components/Resources/Resources";
+import AddResource from "../components/AddResource/AddResource";
 
 
 export const router = createBrowserRouter([
@@ -53,6 +54,10 @@ export const router = createBrowserRouter([
       {
         path:'/resource/all',
         element:<Resources/>
+      },
+      {
+        path:"/resource/add",
+        element:<AddResource/>
       }
     ]
   }
