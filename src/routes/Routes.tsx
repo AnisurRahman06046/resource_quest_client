@@ -7,6 +7,9 @@ import SignUp from "../components/SignUp/SignUp";
 import Login from "../components/Login/Login";
 import Privacy from "../components/PrivacyPolicy/Privacy";
 import Terms from "../components/Terms/Terms";
+import Layout from "../Layout/Layout";
+import Resources from "../components/Resources/Resources";
+
 
 export const router = createBrowserRouter([
   {
@@ -26,21 +29,32 @@ export const router = createBrowserRouter([
         element: <Contact />,
       },
       {
-        path:"/register",
-        element:<SignUp/>
+        path: "/register",
+        element: <SignUp />,
       },
       {
-        path:"/login",
-        element:<Login/>
+        path: "/login",
+        element: <Login />,
       },
       {
-        path:"/policy",
-        element:<Privacy/>
+        path: "/policy",
+        element: <Privacy />,
       },
       {
-        path:"/terms",
-        element:<Terms/>
-      }
+        path: "/terms",
+        element: <Terms />,
+      },
     ],
   },
+  {
+    path:"/resource",
+    element:<Layout/>,
+    children:[
+      {
+        path:'/resource/all',
+        element:<Resources/>
+      }
+    ]
+  }
+ 
 ]);
