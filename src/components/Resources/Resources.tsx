@@ -1,7 +1,9 @@
+import Table from "../Table/Table";
+
 function Resources() {
   return (
-    <div>
-      <h1>this is all resource page</h1>
+    <div className="mx-auto   lg:ms-8">
+     <Table/>
     </div>
   );
 }
