@@ -10,6 +10,7 @@ import Terms from "../components/Terms/Terms";
 import Layout from "../Layout/Layout";
 import Resources from "../components/Resources/Resources";
 import AddResource from "../components/AddResource/AddResource";
+import PrivateRoutes from "./PrivateRoutes";
 
 
 export const router = createBrowserRouter([
@@ -49,7 +50,7 @@ export const router = createBrowserRouter([
   },
   {
     path:"/resource",
-    element:<Layout/>,
+    element:<PrivateRoutes><Layout/></PrivateRoutes>,
     children:[
       {
         path:'/resource/all',
