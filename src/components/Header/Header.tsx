@@ -1,13 +1,22 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import logo1 from "/rq1.webp";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Button from "../Button/Button";
+import { AuthContext, AuthContextType } from "../../providers/AuthProvider";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const {logout} = useContext(AuthContext) as AuthContextType
+  const navigate = useNavigate();
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
   };
+  const handleLogout=()=>{
+    console.log('log out')
+    logout()
+    navigate("/login");
+  }
 
   return (
   //   <nav className="bg-black border-gray-200 dark:bg-gray-900 sticky top-0 z-50">
@@ -173,6 +182,15 @@ function Header() {
           >
             Sign Up
           </Link>
+        </li>
+        <li onClick={handleLogout}>
+          {/* <Link
+            to="/register"
+            className="block py-2 px-3 text-white hover:bg-blue-950 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+          >
+            Log Out
+          </Link> */}
+          <Button title="Log Out"></Button>
         </li>
       </ul>
     </div>

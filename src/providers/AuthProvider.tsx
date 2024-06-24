@@ -9,6 +9,7 @@ type LoginResponse = {
 };
 export type AuthContextType = {
   login: (payload: { email: string; password: string }) => Promise<LoginResponse>;
+  logout: () => void;
   token: string | null;
   loading: boolean;
 };
@@ -26,8 +27,9 @@ function AuthProvider({ children }: AuthProviderProps) {
   useEffect(() => {
     if (localStorage.getItem("site")) {
       setToken(localStorage.getItem("site"));
-      setLoading(false);
+      
     }
+    setLoading(false);
   }, []);
   // login
   const login = async (payload: { email: string; password: string }): Promise<LoginResponse> => {
@@ -40,9 +42,9 @@ function AuthProvider({ children }: AuthProviderProps) {
     });
     const data = await res.json();
     if (data.status === 200) {
-      setLoading(true);
+      // setLoading(true);
       console.log(data.data.access_token);
-      setToken(data.access_token);
+      setToken(data.data.access_token);
       localStorage.setItem("site", data.data.access_token);
     }
     // console.log(data)
@@ -50,7 +52,12 @@ function AuthProvider({ children }: AuthProviderProps) {
     return data;
   };
 
-  const authInfo = { login, token, loading };
+  const logout=()=>{
+    setToken(null)
+    localStorage.removeItem("site")
+  }
+
+  const authInfo = { login, token, loading,logout };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
   );
