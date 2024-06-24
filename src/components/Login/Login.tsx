@@ -3,7 +3,7 @@ import logo from "/rq1.png";
 import Button from "../Button/Button";
 import SideImg from "/loginImg.webp";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { useContext,  } from "react";
+import { useContext, useEffect,  } from "react";
 import { AuthContext, AuthContextType } from "../../providers/AuthProvider";
 
 type Inputs = {
@@ -21,12 +21,12 @@ function Login() {
     // formState: { errors },
   } = useForm<Inputs>();
 
-  // useEffect(()=>{
-  //   if(token){
+  useEffect(()=>{
+    if(token){
       
-  //     navigate("/resource/all");
-  //   }
-  // },[token,navigate])
+      navigate("/resource/all");
+    }
+  },[token,navigate])
 
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     const payload = { email: data.email, password: data.password };
@@ -34,7 +34,7 @@ function Login() {
     // console.log(userLogin,'from login')
     if (result.status === 200 && token ) {
       alert("looged in");
-      navigate("/resource/all");
+      // navigate("/resource/all");
     }
   };
   // if(loading){
