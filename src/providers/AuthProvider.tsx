@@ -25,8 +25,8 @@ function AuthProvider({ children }: AuthProviderProps) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (localStorage.getItem("site")) {
-      setToken(localStorage.getItem("site"));
+    if (localStorage.getItem("access_token")) {
+      setToken(localStorage.getItem("access_token"));
       
     }
     setLoading(false);
@@ -45,7 +45,7 @@ function AuthProvider({ children }: AuthProviderProps) {
       // setLoading(true);
       // console.log(data.data.access_token);
       setToken(data.data.access_token);
-      localStorage.setItem("site", data.data.access_token);
+      localStorage.setItem("access_token", data.data.access_token);
     }
     // console.log(data)
     // console.log(token,'from auth')

@@ -6,7 +6,7 @@ import { AuthContext, AuthContextType } from "../../providers/AuthProvider";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const {logout} = useContext(AuthContext) as AuthContextType
+  const {logout,token} = useContext(AuthContext) as AuthContextType
   const navigate = useNavigate();
 
   const handleToggle = () => {
@@ -167,7 +167,7 @@ function Header() {
             Contact
           </Link>
         </li> */}
-        <li>
+{!token && <>        <li>
           <Link
             to="/login"
             className="block py-2 px-3 text-white rounded hover:bg-blue-950 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
@@ -182,16 +182,12 @@ function Header() {
           >
             Sign Up
           </Link>
-        </li>
-        <li onClick={handleLogout}>
-          {/* <Link
-            to="/register"
-            className="block py-2 px-3 text-white hover:bg-blue-950 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-          >
-            Log Out
-          </Link> */}
-          <Button title="Log Out"></Button>
-        </li>
+        </li></>}
+        {token && (
+              <li onClick={handleLogout}>
+                <Button title="Log Out" />
+              </li>
+            )}
       </ul>
     </div>
   </div>
