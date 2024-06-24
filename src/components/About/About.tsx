@@ -1,7 +1,7 @@
-import logo from "/rq1.webp"
+import logo from "/rq1.webp";
 function About() {
   return (
-    <section className="bg-black dark:bg-gray-800 p-8    mx-auto ">
+    <section className="bg-black dark:bg-gray-800 p-8 pb-12    mx-auto h-[calc(100vh-109px)] overflow-y-auto scrollbar-hide">
       <div className="text-center max-w-3xl mx-auto ">
         <img
           className="mx-auto w-48 mb-4"
@@ -68,8 +68,6 @@ function About() {
         </p>
       </div>
     </section>
-
-
   );
 }
 

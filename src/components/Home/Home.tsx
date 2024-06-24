@@ -4,9 +4,9 @@ import Banner from "../Banner/Banner";
 
 function Home() {
   return (
-    <div>
+    <div className="w-full h-full relative">
       {/* <Header /> */}
-      <Banner/>
+      <Banner />
       {/* <FooterComponent/> */}
     </div>
   );
