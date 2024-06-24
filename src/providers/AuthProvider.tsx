@@ -3,9 +3,9 @@ type LoginResponse = {
   status: number;
   data: {
     access_token: string;
-    // Add other properties as needed
+    
   };
-  // Add other properties as needed
+  
 };
 export type AuthContextType = {
   login: (payload: { email: string; password: string }) => Promise<LoginResponse>;
