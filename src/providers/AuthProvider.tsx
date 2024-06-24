@@ -43,7 +43,7 @@ function AuthProvider({ children }: AuthProviderProps) {
     const data = await res.json();
     if (data.status === 200) {
       // setLoading(true);
-      console.log(data.data.access_token);
+      // console.log(data.data.access_token);
       setToken(data.data.access_token);
       localStorage.setItem("site", data.data.access_token);
     }
