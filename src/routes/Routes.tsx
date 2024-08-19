@@ -11,6 +11,7 @@ import Layout from "../Layout/Layout";
 import Resources from "../components/Resources/Resources";
 import AddResource from "../components/AddResource/AddResource";
 import PrivateRoutes from "./PrivateRoutes";
+import AllResources from "../components/publicResources/AllResources";
 
 export const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/resources/public-resources",
+        element: <AllResources />,
       },
       {
         path: "/about",
