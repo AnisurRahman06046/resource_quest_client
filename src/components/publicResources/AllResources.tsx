@@ -13,6 +13,7 @@ function AllResources() {
         })
           .then((res) => res.json())
           .then((result) => {
+            console.log(result)
             if (result.data) {
               setDatas(result.data);
             }
@@ -21,8 +22,8 @@ function AllResources() {
       }, []);
   return (
   
-    <div className="relative lg:m-8 overflow-x-auto shadow-md">
-    <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+    <div className="relative min-h-screen lg:m-8 overflow-x-auto shadow-md">
+    <table className="w-full  text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
       <tbody>
         {datas.length > 0 ? (
           datas.map((d, index) => (

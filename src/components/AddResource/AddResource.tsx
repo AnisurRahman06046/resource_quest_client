@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 type Inputs = {
   title: string;
   link: string;
+  isPublic: boolean;
   // description: string;
 };
 
@@ -15,6 +16,7 @@ function AddResource() {
   const {token} = useContext(AuthContext) as AuthContextType
   const navigate = useNavigate()
   const onSubmit: SubmitHandler<Inputs> = (data) => {
+    // console.log(data)
     fetch(`${import.meta.env.VITE_SERVER_SITE}/resources/add`,{
       method:"POST",
       headers:{Authorization: `Bearer ${token}`,"content-type":"application/json"},
@@ -22,7 +24,7 @@ function AddResource() {
     })
     .then(res=>res.json())
     .then(data=>{
-      console.log(data)
+      // console.log(data)
       if(data.status===201){
         alert("Successfully added")
         navigate("/resource/all")
@@ -58,6 +60,18 @@ function AddResource() {
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             required
           />
+        </div>
+
+        <div className="mb-5">
+          <label className="inline-flex items-center">
+            <input
+              type="checkbox"
+              {...register("isPublic")}
+              className="form-checkbox text-blue-600"
+              defaultChecked // default value is true (public)
+            />
+            <span className="ml-2 text-white lg:text-xl text-sm">Public</span>
+          </label>
         </div>
         {/* <div className="mb-5">
           <label className="block mb-2 text-sm lg:text-xl font-bold text-white dark:text-white">

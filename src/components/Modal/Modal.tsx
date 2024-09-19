@@ -179,22 +179,25 @@ interface IData {
   title: string;
   link: string;
   _id: string;
+  isPublic: boolean;
 }
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, data, onUpdate }) => {
   const [title, setTitle] = useState("");
   const [link, setLink] = useState("");
+  const [isPublic, setIsPublic] = useState(true); // Default true
 
   useEffect(() => {
     if (data) {
       setTitle(data.title);
       setLink(data.link);
+      setIsPublic(data.isPublic); 
     }
   }, [data]);
 
   const handleUpdate = () => {
     if (data) {
-      onUpdate(data._id, { title, link }); // Pass only title and link as Partial<IData>
+      onUpdate(data._id, { title, link,isPublic }); // Pass only title and link as Partial<IData>
     }
     onClose();
   };
@@ -229,6 +232,17 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, data, onUpdate }) => {
                 value={link}
                 onChange={(e) => setLink(e.target.value)}
               />
+            </div>
+            <div className="mb-4">
+              <label className="inline-flex items-center">
+                <input
+                  type="checkbox"
+                  className="form-checkbox text-blue-600"
+                  checked={isPublic}
+                  onChange={(e) => setIsPublic(e.target.checked)} // Update isPublic state
+                />
+                <span className="ml-2">Public</span>
+              </label>
             </div>
             <div className="flex justify-end">
                 <span onClick={handleUpdate}>

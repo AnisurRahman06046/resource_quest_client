@@ -96,6 +96,7 @@ interface IData {
   title: string;
   link: string;
   _id: string;
+  isPublic: boolean;
 }
 
 const Table: React.FC = () => {
@@ -111,6 +112,7 @@ const Table: React.FC = () => {
     })
       .then((res) => res.json())
       .then((result) => {
+        // console.log(result)
         if (result.data) {
           setDatas(result.data);
         }
